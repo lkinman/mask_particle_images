@@ -12,7 +12,7 @@ python project3d.py mask.mrc mask_projections.mrcs --in-pose pose.pkl --is-mask
 ```
 Note the use of the ```is-mask``` flag. Note also that the particle projection angles are supplied by ```pose.pkl``` which should be a cryoDRGN-format pose file. This file can be readily generate from a .star or .cs refinement file using the ```parse_pose_csparc``` or ```parse_pose_star``` commands implemented in [cryoDRGN](https://github.com/ml-struct-bio/cryodrgn).   
 
-Finally, use the script provided here to output a 
+Finally, use the script provided here to output the stack of masked particle images. 
 ```
 python mask_particles.py --mask_projections mask_projections.mrcs --particles job149.128.txt  --outfile output.mrcs
 ```
