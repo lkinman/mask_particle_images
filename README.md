@@ -2,6 +2,10 @@
 The code provided here multiplies a stack of mask projections against a particle stack to produce a masked particle stack. The mask projections can be generated using a mask and the ```project3d.py``` script implemented in [cryoSRPNT](https://github.com/bpowell122/cryoSRPNT). 
 
 ## Installing
+The only non-standard dependency required for this script is [mrcfile](https://pypi.org/project/mrcfile/), which can be installed with pip:
+```
+pip install mrcfile
+``` 
 
 ## Using 
 First, generate the desired mask. As is standard practice, we recommend using a low pass filtered and dilated mask with soft edges when generating the mask projections. We usually do this by generating the mask in ChimeraX with ```molmap``` and resampling on the desired grid, then importing the resulting mask into cryoSPARC and using a Vol Tools job to apply a filter and a binarization threshold, followed by dilation and soft padding.   
